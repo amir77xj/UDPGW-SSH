@@ -10,7 +10,7 @@ wget -O /bin/badvpn-udpgw "https://www.dropbox.com/s/tgkxdwb03r7w59r/badvpn-udpg
 wget -O /usr/bin/badvpn-udpgw "https://www.dropbox.com/s/tgkxdwb03r7w59r/badvpn-udpgw"
 
 #port BadVPN 7300
-sed -i '$ i\screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 10
+sed -i '$ i\screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7301 --max-clients 1000 --max-connections-for-client 10
 ' /etc/rc.local
 
 #permission
@@ -19,4 +19,4 @@ chmod +x /bin/badvpn-udpgw
 chmod +x /etc/rc.local
 
 #coba jalankan badvpn 7300
-screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 10
+screen -dmS udpvpn /bin/badvpn-udpgw --listen-addr 127.0.0.1:7301 --max-clients 1000 --max-connections-for-client 10
